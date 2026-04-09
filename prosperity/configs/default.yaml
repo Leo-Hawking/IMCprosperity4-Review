@@ -1,0 +1,17 @@
+# Round 1 per-product 参数
+EMERALDS:
+  fair_method: constant
+  fair_value: 10000
+  position_limit: 20
+  normal_offset: 8        # ± 8 — 成交密集档位
+  cut_offset: 7           # ± 7 — 头寸过大时截胡档位
+  pos_heavy: 12           # |pos| > 12 触发截胡
+
+TOMATOES:
+  fair_method: wall_mid
+  position_limit: 200
+  normal_offset: 7        # penny the wall
+  mid_offset: 6           # 中等头寸减仓侧加挂档位
+  extreme_offsets: [1, 2] # 极端头寸减仓档位
+  pos_mid: 80             # normal → mid 门槛
+  pos_extreme: 160        # mid → extreme 门槛；该方向停吃
