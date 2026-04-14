@@ -123,8 +123,8 @@ class Trader:
             edge = fair - price
             if price < fair and buy_cap > 0:
                 if pos < 0:
-                    # 买入会让空头回补，最多吃到刚好归零
-                    qty = min(-vol, buy_cap, -pos)
+                    # 买入会让空头回补，最多吃到刚好归零/新版本会继续吃更多
+                    qty = int(min(-vol, buy_cap, -pos))
                 else:
                     taker_edge = (
                         TOMATO_TAKER_EDGE_A1
@@ -143,8 +143,8 @@ class Trader:
             edge = price - fair
             if price > fair and sell_cap > 0:
                 if pos > 0:
-                    # 卖出会让多头减仓，最多吃到刚好归零
-                    qty = min(vol, sell_cap, pos)
+                    # 卖出会让多头减仓，最多吃到刚好归零/新版本会继续吃更多
+                    qty = int(min(vol, sell_cap, pos))
                 else:
                     taker_edge = (
                         TOMATO_TAKER_EDGE_A1

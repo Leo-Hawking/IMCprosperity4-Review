@@ -11,7 +11,7 @@ PROCESSED_DIR = DATA_DIR / "processed"
 def load_prices(round_num: int, day: int) -> pl.DataFrame:
     """加载 prices CSV，返回长格式 DataFrame（每行一个 bid/ask 档位）。"""
     path = RAW_DIR / f"prices_round_{round_num}_day_{day}.csv"
-    raw = pl.read_csv(path, separator=";")
+    raw = pl.read_csv(path, separator=";", infer_schema_length=10000)
 
     # 宽格式 -> 长格式：每个 bid/ask 档位一行
     rows = []
