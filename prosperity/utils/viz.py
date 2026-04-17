@@ -123,6 +123,74 @@ def plot_orderbook_scatter(
         name="Asks",
     ))
 
+    # Irrational / near-fair order markers (only when fair reference is available).
+    if wm is not None:
+        p_with_fair = (
+            p.join(wm.select(["timestamp", "product", "wall_mid"]), on=["timestamp", "product"], how="left")
+            .filter(pl.col("wall_mid").is_not_null())
+            .with_columns((pl.col("price") - pl.col("wall_mid")).alias("norm_price"))
+        )
+
+        irrational_orders = p_with_fair.filter(
+            ((pl.col("side") == "bid") & (pl.col("norm_price") > 0))
+            | ((pl.col("side") == "ask") & (pl.col("norm_price") < 0))
+        )
+        if irrational_orders.height > 0:
+            irr_sizes = [
+                max(10, min(28, abs(v) / max_vol * 30)) if v is not None else 10
+                for v in irrational_orders["volume"].to_list()
+            ]
+            fig.add_trace(go.Scatter(
+                x=irrational_orders["timestamp"].to_list(),
+                y=irrational_orders["price"].to_list(),
+                mode="markers",
+                marker=dict(
+                    color="gold",
+                    symbol="x",
+                    size=irr_sizes,
+                    line=dict(width=1, color="black"),
+                ),
+                name="Cross-Fair Orders",
+                customdata=list(zip(
+                    irrational_orders["norm_price"].to_list(),
+                    irrational_orders["price"].to_list(),
+                    irrational_orders["volume"].to_list(),
+                )),
+                hovertemplate="t=%{x}<br>p=%{y}<br>Δ=%{customdata[0]}<br>px=%{customdata[1]}<br>qty=%{customdata[2]}<extra>Cross-Fair</extra>",
+            ))
+
+        near_fair_orders = p_with_fair.filter(
+            (pl.col("norm_price").abs() <= 4)
+            & (
+                ((pl.col("side") == "bid") & (pl.col("norm_price") <= 0))
+                | ((pl.col("side") == "ask") & (pl.col("norm_price") >= 0))
+            )
+        )
+        if near_fair_orders.height > 0:
+            near_sizes = [
+                max(8, min(20, abs(v) / max_vol * 18)) if v is not None else 8
+                for v in near_fair_orders["volume"].to_list()
+            ]
+            fig.add_trace(go.Scatter(
+                x=near_fair_orders["timestamp"].to_list(),
+                y=near_fair_orders["price"].to_list(),
+                mode="markers",
+                marker=dict(
+                    color="purple",
+                    symbol="diamond",
+                    size=near_sizes,
+                    line=dict(width=1, color="indigo"),
+                    opacity=0.9,
+                ),
+                name="Near-Fair Rational Orders (|Δ|<=4)",
+                customdata=list(zip(
+                    near_fair_orders["norm_price"].to_list(),
+                    near_fair_orders["price"].to_list(),
+                    near_fair_orders["volume"].to_list(),
+                )),
+                hovertemplate="t=%{x}<br>p=%{y}<br>Δ=%{customdata[0]}<br>px=%{customdata[1]}<br>qty=%{customdata[2]}<extra>Near-Fair</extra>",
+            ))
+
     # Trades
     if t is not None:
         trade_qty_col = "quantity" if "quantity" in t.columns else ("volume" if "volume" in t.columns else None)
@@ -284,6 +352,58 @@ def plot_normalized_orderbook(
         hovertemplate="t=%{x}<br>p=%{y}<br>v=%{customdata}<extra></extra>",
         name="Ask",
     ))
+
+    irrational_orders = joined.filter(
+        ((pl.col("side") == "bid") & (pl.col("norm_price") > 0))
+        | ((pl.col("side") == "ask") & (pl.col("norm_price") < 0))
+    )
+    if irrational_orders.height > 0:
+        irr_sizes = [
+            max(10, min(28, abs(v) / max_vol * 30)) if v is not None else 10
+            for v in irrational_orders["volume"].to_list()
+        ]
+        fig.add_trace(go.Scatter(
+            x=irrational_orders["timestamp"].to_list(),
+            y=irrational_orders["norm_price"].to_list(),
+            mode="markers",
+            marker=dict(
+                color="gold",
+                symbol="x",
+                size=irr_sizes,
+                line=dict(width=1, color="black"),
+            ),
+            name="Cross-Fair Orders",
+            customdata=list(zip(irrational_orders["price"].to_list(), irrational_orders["volume"].to_list())),
+            hovertemplate="t=%{x}<br>p=%{y}<br>px=%{customdata[0]}<br>qty=%{customdata[1]}<extra>Cross-Fair</extra>",
+        ))
+
+    near_fair_orders = joined.filter(
+        (pl.col("norm_price").abs() <= 4)
+        & (
+            ((pl.col("side") == "bid") & (pl.col("norm_price") <= 0))
+            | ((pl.col("side") == "ask") & (pl.col("norm_price") >= 0))
+        )
+    )
+    if near_fair_orders.height > 0:
+        near_sizes = [
+            max(8, min(20, abs(v) / max_vol * 18)) if v is not None else 8
+            for v in near_fair_orders["volume"].to_list()
+        ]
+        fig.add_trace(go.Scatter(
+            x=near_fair_orders["timestamp"].to_list(),
+            y=near_fair_orders["norm_price"].to_list(),
+            mode="markers",
+            marker=dict(
+                color="purple",
+                symbol="diamond",
+                size=near_sizes,
+                line=dict(width=1, color="indigo"),
+                opacity=0.9,
+            ),
+            name="Near-Fair Rational Orders (|Δ|<=4)",
+            customdata=list(zip(near_fair_orders["price"].to_list(), near_fair_orders["volume"].to_list())),
+            hovertemplate="t=%{x}<br>p=%{y}<br>px=%{customdata[0]}<br>qty=%{customdata[1]}<extra>Near-Fair</extra>",
+        ))
 
     # Trades mapped to normalized axis with the same wall_mid reference.
     if trades is not None:
