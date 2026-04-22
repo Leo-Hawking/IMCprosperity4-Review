@@ -1,11 +1,12 @@
 """
-Hyperparameter grid search for 策略v2.
+Hyperparameter grid search for trading strategies.
 Focuses on finding flat high-PnL plateaus rather than sharp peaks.
 """
 
 from __future__ import annotations
 
 import importlib
+import importlib.util
 import itertools
 import sys
 import time
@@ -17,25 +18,43 @@ sys.path.insert(0, str(Path(__file__).parent))
 
 
 TUNABLE_PARAMS = {
-    "Z_SAT":           {"default": 1.5,  "range": np.arange(0.5, 3.1, 0.25)},
-    "DELTA_Q_TARGET":  {"default": 10,   "range": np.arange(4, 25, 2)},
-    "DELTA_Q_EXTREME": {"default": 60,   "range": np.arange(30, 81, 5)},
-    "BASE_MM_SIZE":    {"default": 10,   "range": np.arange(2, 22, 2)},
-    "INNER_ZONE":      {"default": 5,    "range": np.arange(3, 9, 1)},
+    # v2 core
+    "Z_SAT":           {"range": np.arange(0.5, 3.1, 0.25)},
+    "DELTA_Q_TARGET":  {"range": np.arange(4, 25, 2)},
+    "DELTA_Q_EXTREME": {"range": np.arange(30, 81, 5)},
+    "BASE_MM_SIZE":    {"range": np.arange(2, 22, 2)},
+    "INNER_ZONE":      {"range": np.arange(3, 9, 1)},
+    # v3 OU estimation
+    "SHRINK_MIN":      {"range": np.arange(0.1, 1.01, 0.1)},
+    "SHRINK_MAX":      {"range": np.arange(1.0, 3.1, 0.25)},
+    "EWMA_ALPHA":      {"range": np.arange(0.02, 0.32, 0.03)},
+    "WARMUP_STEPS":    {"range": np.arange(500, 5001, 500)},
+    "REFIT_INTERVAL":  {"range": np.arange(100, 1100, 100)},
+    "R2_PRIOR":        {"range": np.arange(0.01, 0.16, 0.01)},
 }
+
+# module name used by _run_one; set via --strategy CLI or set_strategy()
+_STRATEGY_MODULE: str = "新版ash"
+
+
+def set_strategy(name: str):
+    global _STRATEGY_MODULE
+    _STRATEGY_MODULE = name
 
 
 def _run_one(params: dict, product: str = "ASH_COATED_OSMIUM",
              days: list[int] | None = None) -> dict:
-    import backtest
-    strat = importlib.import_module("策略v2")
-    importlib.reload(strat)
+    import old_verison_backtest
+    spec = importlib.util.spec_from_file_location(
+        "strat", str(Path(__file__).parent / f"{_STRATEGY_MODULE}.py"))
+    strat = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(strat)
 
     for k, v in params.items():
         setattr(strat, k, v)
 
     trader = strat.Trader()
-    result = backtest.simulate_multiday(trader, product, days=days)
+    result = old_verison_backtest.simulate_multiday(trader, product, days=days)
     return result["summary"]
 
 
@@ -143,18 +162,31 @@ def plot_heatmap(result: dict, mode: str = "pnl",
     return fig
 
 
-def full_sweep(product: str = "ASH_COATED_OSMIUM",
-               days: list[int] | None = None,
-               savedir: str | None = None):
-    import matplotlib
-    matplotlib.use("Agg")
-
-    pairs = [
+SWEEP_PRESETS = {
+    "v2": [
         ("Z_SAT", "BASE_MM_SIZE"),
         ("Z_SAT", "DELTA_Q_TARGET"),
         ("DELTA_Q_TARGET", "DELTA_Q_EXTREME"),
         ("BASE_MM_SIZE", "INNER_ZONE"),
-    ]
+    ],
+    "v3": [
+        ("Z_SAT", "REFIT_INTERVAL"),
+        ("SHRINK_MIN", "SHRINK_MAX"),
+        ("EWMA_ALPHA", "WARMUP_STEPS"),
+        ("R2_PRIOR", "REFIT_INTERVAL"),
+        ("Z_SAT", "BASE_MM_SIZE"),
+    ],
+}
+
+
+def full_sweep(product: str = "ASH_COATED_OSMIUM",
+               days: list[int] | None = None,
+               savedir: str | None = None,
+               preset: str = "v3"):
+    import matplotlib
+    matplotlib.use("Agg")
+
+    pairs = SWEEP_PRESETS.get(preset, SWEEP_PRESETS["v3"])
 
     results = []
     for px, py in pairs:
@@ -180,18 +212,21 @@ if __name__ == "__main__":
     import argparse
 
     ap = argparse.ArgumentParser()
+    ap.add_argument("--strategy", default="新版ash", help="Strategy module name (no .py)")
     ap.add_argument("--param-x", default="Z_SAT")
-    ap.add_argument("--param-y", default="BASE_MM_SIZE")
-    ap.add_argument("--sweep", action="store_true", help="Run all 4 preset pairs")
+    ap.add_argument("--param-y", default="REFIT_INTERVAL")
+    ap.add_argument("--sweep", action="store_true", help="Run preset sweep pairs")
+    ap.add_argument("--preset", default="v3", choices=list(SWEEP_PRESETS.keys()))
     ap.add_argument("--savedir", default=str(Path(__file__).parent.parent / "analysis_outputs"))
     ap.add_argument("--show", action="store_true")
     args = ap.parse_args()
 
+    set_strategy(args.strategy)
     Path(args.savedir).mkdir(parents=True, exist_ok=True)
 
     if args.sweep:
-        full_sweep(savedir=args.savedir)
+        full_sweep(savedir=args.savedir, preset=args.preset)
     else:
-        print(f"\n=== {args.param_x} vs {args.param_y} ===")
+        print(f"\n=== {args.param_x} vs {args.param_y} ({args.strategy}) ===")
         r = grid_search_2d(args.param_x, args.param_y)
         plot_heatmap(r, show=args.show, savepath=f"{args.savedir}/{args.param_x}_vs_{args.param_y}.png")

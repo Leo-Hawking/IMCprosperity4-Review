@@ -64,6 +64,28 @@ python backtest.py --strategy 策略v2.py --day 0 --plot --save output.png
 #   --save      图片保存路径（不指定则弹窗显示）
 ```
 
+## `MIN_POSITION` 超参数热力图（`INTARIAN_PEPPER_ROOT`）
+
+新增脚本：`hypersearch_pepper.py`，重点扫描 `MIN_POSITION`，并配合 `ASK_SIZE` 作为第二维绘制热力图，便于找 PnL 高原区。
+
+```bash
+# 默认扫描：MIN_POSITION 55..79, ASK_SIZE 4..12
+python hypersearch_pepper.py
+
+# 自定义扫描范围（更快）
+python hypersearch_pepper.py \
+    --min-pos-start 60 --min-pos-stop 78 --min-pos-step 1 \
+    --ask-size-start 6 --ask-size-stop 10 --ask-size-step 1
+
+# 指定输出目录
+python hypersearch_pepper.py --outdir ../analysis_outputs/pepper_hypersearch
+```
+
+输出文件：
+- `pepper_min_position_grid.csv`：每组参数的 PnL / drawdown / 分日 PnL
+- `pepper_min_position_heatmap.png`：左图 Final PnL，右图 Plateau Score（3x3 局部最小值）
+- `pepper_min_position_summary.json`：最佳峰值点与最佳高原点摘要
+
 ## 回测机制
 
 每个 tick 按顺序执行：

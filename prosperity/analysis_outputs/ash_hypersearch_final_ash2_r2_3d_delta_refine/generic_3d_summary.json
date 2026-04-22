@@ -1,0 +1,37 @@
+{
+  "strategy": "/Users/leoliu/imc/prosperity/round2trade/final_ash2.py",
+  "target": "ASH_COATED_OSMIUM",
+  "round": 2,
+  "days": [
+    -1,
+    0,
+    1
+  ],
+  "params": [
+    "DELTA_Q_TARGET",
+    "DELTA_Q_EXTREME",
+    "DELTA_Q_ULTRA"
+  ],
+  "grid_shape": {
+    "DELTA_Q_EXTREME": 15,
+    "DELTA_Q_TARGET": 7,
+    "DELTA_Q_ULTRA": 7
+  },
+  "best_pnl_point": {
+    "DELTA_Q_EXTREME": 40.0,
+    "DELTA_Q_TARGET": 21.0,
+    "DELTA_Q_ULTRA": 79.0,
+    "final_pnl": 62985.0
+  },
+  "best_plateau_point": {
+    "DELTA_Q_EXTREME": 40.0,
+    "DELTA_Q_TARGET": 21.0,
+    "DELTA_Q_ULTRA": 79.0,
+    "plateau_score": 62728.0,
+    "final_pnl": 62985.0
+  },
+  "artifacts": {
+    "grid_csv": "/Users/leoliu/imc/prosperity/analysis_outputs/ash_hypersearch_final_ash2_r2_3d_delta_refine/generic_3d_grid.csv",
+    "projection_heatmap_png": "/Users/leoliu/imc/prosperity/analysis_outputs/ash_hypersearch_final_ash2_r2_3d_delta_refine/generic_3d_projection_heatmap.png"
+  }
+}
