@@ -1,0 +1,34 @@
+{
+  "strategy": "/Users/leoliu/imc/prosperity/round3trade/mean_reversion_hybrid.py",
+  "target": "HYDROGEL_PACK",
+  "round": 3,
+  "days": [
+    0,
+    1,
+    2
+  ],
+  "grid_shape": {
+    "SPAN": 4,
+    "D": 6,
+    "W": 5
+  },
+  "best_pnl": {
+    "SPAN": 10000.0,
+    "W": 44.0,
+    "D": 80.0,
+    "final_pnl": 48499.0,
+    "sharpe": 1.7856819605293892
+  },
+  "best_sharpe": {
+    "SPAN": 10000.0,
+    "W": 38.0,
+    "D": 140.0,
+    "final_pnl": 32226.0,
+    "sharpe": 2.1706221108271184
+  },
+  "artifacts": {
+    "grid_csv": "/Users/leoliu/imc/prosperity/analysis_outputs/hydrogel_hybridsearch/grid.csv",
+    "heatmap_pnl": "/Users/leoliu/imc/prosperity/analysis_outputs/hydrogel_hybridsearch/heatmap_pnl.png",
+    "heatmap_sharpe": "/Users/leoliu/imc/prosperity/analysis_outputs/hydrogel_hybridsearch/heatmap_sharpe.png"
+  }
+}

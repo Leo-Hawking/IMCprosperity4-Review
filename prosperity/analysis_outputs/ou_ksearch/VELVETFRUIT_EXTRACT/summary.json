@@ -1,0 +1,56 @@
+{
+  "product": "VELVETFRUIT_EXTRACT",
+  "mode": "entry_active_2d",
+  "default": {
+    "k_entry": 1.0,
+    "k_active": 2.8
+  },
+  "grid": {
+    "entry_scales": [
+      0.75,
+      0.9,
+      1.0,
+      1.1,
+      1.25
+    ],
+    "active_scales": [
+      0.75,
+      0.9,
+      1.0,
+      1.1,
+      1.25,
+      1.4
+    ]
+  },
+  "best_pnl_peak": {
+    "k_entry": 1.25,
+    "k_active": 2.0999999999999996,
+    "final_pnl": 67511.0,
+    "sharpe": 2.7550515919491514
+  },
+  "best_pnl_plateau": {
+    "k_entry": 1.1,
+    "k_active": 3.9199999999999995,
+    "plateau_pnl": 51753.0,
+    "raw_pnl": 51753.0,
+    "sharpe": 2.5521500506556665
+  },
+  "best_sharpe_peak": {
+    "k_entry": 1.25,
+    "k_active": 2.0999999999999996,
+    "final_pnl": 67511.0,
+    "sharpe": 2.7550515919491514
+  },
+  "best_sharpe_plateau": {
+    "k_entry": 1.1,
+    "k_active": 3.9199999999999995,
+    "plateau_sharpe": 2.536578861699219,
+    "raw_sharpe": 2.5521500506556665,
+    "final_pnl": 51753.0
+  },
+  "artifacts": {
+    "grid_csv": "/Users/leoliu/imc/prosperity/analysis_outputs/ou_ksearch/VELVETFRUIT_EXTRACT/grid.csv",
+    "heatmap_pnl": "/Users/leoliu/imc/prosperity/analysis_outputs/ou_ksearch/VELVETFRUIT_EXTRACT/heatmap_pnl.png",
+    "heatmap_sharpe": "/Users/leoliu/imc/prosperity/analysis_outputs/ou_ksearch/VELVETFRUIT_EXTRACT/heatmap_sharpe.png"
+  }
+}

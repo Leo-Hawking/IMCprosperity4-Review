@@ -9,11 +9,12 @@ from typing import Callable
 
 import polars as pl
 
-from . import ASH_COATED_OSMIUM, INTARIAN_PEPPER_ROOT
+from . import ASH_COATED_OSMIUM, HYDROGEL_PACK, INTARIAN_PEPPER_ROOT
 from .base import compute_wall_mid_fair
 
 PRODUCT_FAIR_REGISTRY: dict[str, Callable[..., pl.DataFrame]] = {
     ASH_COATED_OSMIUM.PRODUCT: ASH_COATED_OSMIUM.compute_fair,
+    HYDROGEL_PACK.PRODUCT: HYDROGEL_PACK.compute_fair,
     INTARIAN_PEPPER_ROOT.PRODUCT: INTARIAN_PEPPER_ROOT.compute_fair,
 }
 

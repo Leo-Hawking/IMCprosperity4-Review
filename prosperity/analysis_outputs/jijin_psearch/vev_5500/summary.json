@@ -1,0 +1,34 @@
+{
+  "product": "VEV_5500",
+  "default_threshold": 4.0,
+  "best_pnl_peak": {
+    "halflife": 500,
+    "threshold_scale": 0.5,
+    "threshold_value": 2.0,
+    "final_pnl": 3828.0,
+    "sharpe": 0.4838153443625895
+  },
+  "best_pnl_plateau": {
+    "halflife": 500,
+    "threshold_scale": 0.5,
+    "threshold_value": 2.0,
+    "plateau_pnl": 2385.0,
+    "raw_pnl": 3828.0,
+    "sharpe": 0.4838153443625895
+  },
+  "best_sharpe_peak": {
+    "halflife": 500,
+    "threshold_scale": 0.5,
+    "threshold_value": 2.0,
+    "final_pnl": 3828.0,
+    "sharpe": 0.4838153443625895
+  },
+  "best_sharpe_plateau": {
+    "halflife": 500,
+    "threshold_scale": 0.5,
+    "threshold_value": 2.0,
+    "plateau_sharpe": 0.3219556999754799,
+    "raw_sharpe": 0.4838153443625895,
+    "final_pnl": 3828.0
+  }
+}

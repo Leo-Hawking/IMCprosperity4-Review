@@ -1,0 +1,490 @@
+[
+  {
+    "product": "HYDROGEL_PACK",
+    "mode": "entry_active_2d",
+    "default": {
+      "k_entry": 1.6,
+      "k_active": 2.1
+    },
+    "grid": {
+      "entry_scales": [
+        0.75,
+        0.9,
+        1.0,
+        1.1,
+        1.25
+      ],
+      "active_scales": [
+        0.75,
+        0.9,
+        1.0,
+        1.1,
+        1.25,
+        1.4
+      ]
+    },
+    "best_pnl_peak": {
+      "k_entry": 1.2000000000000002,
+      "k_active": 1.5750000000000002,
+      "final_pnl": 92843.0,
+      "sharpe": 1.8574937544930068
+    },
+    "best_pnl_plateau": {
+      "k_entry": 2.0,
+      "k_active": 1.5750000000000002,
+      "plateau_pnl": 89227.0,
+      "raw_pnl": NaN,
+      "sharpe": NaN
+    },
+    "best_sharpe_peak": {
+      "k_entry": 2.0,
+      "k_active": 2.625,
+      "final_pnl": 59548.0,
+      "sharpe": 2.2986565604723053
+    },
+    "best_sharpe_plateau": {
+      "k_entry": 1.2000000000000002,
+      "k_active": 2.3100000000000005,
+      "plateau_sharpe": 2.1469457765884137,
+      "raw_sharpe": 2.1469457765884137,
+      "final_pnl": 69461.0
+    },
+    "artifacts": {
+      "grid_csv": "/Users/leoliu/imc/prosperity/analysis_outputs/ou_ksearch/HYDROGEL_PACK/grid.csv",
+      "heatmap_pnl": "/Users/leoliu/imc/prosperity/analysis_outputs/ou_ksearch/HYDROGEL_PACK/heatmap_pnl.png",
+      "heatmap_sharpe": "/Users/leoliu/imc/prosperity/analysis_outputs/ou_ksearch/HYDROGEL_PACK/heatmap_sharpe.png"
+    }
+  },
+  {
+    "product": "VEV_4000",
+    "mode": "entry_active_2d",
+    "default": {
+      "k_entry": 1.5,
+      "k_active": 2.8
+    },
+    "grid": {
+      "entry_scales": [
+        0.75,
+        0.9,
+        1.0,
+        1.1,
+        1.25
+      ],
+      "active_scales": [
+        0.75,
+        0.9,
+        1.0,
+        1.1,
+        1.25,
+        1.4
+      ]
+    },
+    "best_pnl_peak": {
+      "k_entry": 1.875,
+      "k_active": 2.0999999999999996,
+      "final_pnl": 20614.0,
+      "sharpe": 0.7493172869184828
+    },
+    "best_pnl_plateau": {
+      "k_entry": 1.875,
+      "k_active": 2.0999999999999996,
+      "plateau_pnl": 12715.0,
+      "raw_pnl": 20614.0,
+      "sharpe": 0.7493172869184828
+    },
+    "best_sharpe_peak": {
+      "k_entry": 1.35,
+      "k_active": 2.8,
+      "final_pnl": 14945.0,
+      "sharpe": 0.8684667151507728
+    },
+    "best_sharpe_plateau": {
+      "k_entry": 1.875,
+      "k_active": 2.0999999999999996,
+      "plateau_sharpe": 0.7187895757898081,
+      "raw_sharpe": 0.7493172869184828,
+      "final_pnl": 20614.0
+    },
+    "artifacts": {
+      "grid_csv": "/Users/leoliu/imc/prosperity/analysis_outputs/ou_ksearch/VEV_4000/grid.csv",
+      "heatmap_pnl": "/Users/leoliu/imc/prosperity/analysis_outputs/ou_ksearch/VEV_4000/heatmap_pnl.png",
+      "heatmap_sharpe": "/Users/leoliu/imc/prosperity/analysis_outputs/ou_ksearch/VEV_4000/heatmap_sharpe.png"
+    }
+  },
+  {
+    "product": "VELVETFRUIT_EXTRACT",
+    "mode": "entry_active_2d",
+    "default": {
+      "k_entry": 1.0,
+      "k_active": 2.8
+    },
+    "grid": {
+      "entry_scales": [
+        0.75,
+        0.9,
+        1.0,
+        1.1,
+        1.25
+      ],
+      "active_scales": [
+        0.75,
+        0.9,
+        1.0,
+        1.1,
+        1.25,
+        1.4
+      ]
+    },
+    "best_pnl_peak": {
+      "k_entry": 1.25,
+      "k_active": 2.0999999999999996,
+      "final_pnl": 67511.0,
+      "sharpe": 2.7550515919491514
+    },
+    "best_pnl_plateau": {
+      "k_entry": 1.1,
+      "k_active": 3.9199999999999995,
+      "plateau_pnl": 51753.0,
+      "raw_pnl": 51753.0,
+      "sharpe": 2.5521500506556665
+    },
+    "best_sharpe_peak": {
+      "k_entry": 1.25,
+      "k_active": 2.0999999999999996,
+      "final_pnl": 67511.0,
+      "sharpe": 2.7550515919491514
+    },
+    "best_sharpe_plateau": {
+      "k_entry": 1.1,
+      "k_active": 3.9199999999999995,
+      "plateau_sharpe": 2.536578861699219,
+      "raw_sharpe": 2.5521500506556665,
+      "final_pnl": 51753.0
+    },
+    "artifacts": {
+      "grid_csv": "/Users/leoliu/imc/prosperity/analysis_outputs/ou_ksearch/VELVETFRUIT_EXTRACT/grid.csv",
+      "heatmap_pnl": "/Users/leoliu/imc/prosperity/analysis_outputs/ou_ksearch/VELVETFRUIT_EXTRACT/heatmap_pnl.png",
+      "heatmap_sharpe": "/Users/leoliu/imc/prosperity/analysis_outputs/ou_ksearch/VELVETFRUIT_EXTRACT/heatmap_sharpe.png"
+    }
+  },
+  {
+    "product": "VEV_4500",
+    "mode": "entry_active_2d",
+    "default": {
+      "k_entry": 1.0,
+      "k_active": 4.0
+    },
+    "grid": {
+      "entry_scales": [
+        0.75,
+        0.9,
+        1.0,
+        1.1,
+        1.25
+      ],
+      "active_scales": [
+        0.75,
+        0.9,
+        1.0,
+        1.1,
+        1.25,
+        1.4
+      ]
+    },
+    "best_pnl_peak": {
+      "k_entry": 0.75,
+      "k_active": 3.0,
+      "final_pnl": 9379.5,
+      "sharpe": 1.568302431345054
+    },
+    "best_pnl_plateau": {
+      "k_entry": 0.75,
+      "k_active": 3.0,
+      "plateau_pnl": 9379.5,
+      "raw_pnl": 9379.5,
+      "sharpe": 1.568302431345054
+    },
+    "best_sharpe_peak": {
+      "k_entry": 0.75,
+      "k_active": 3.0,
+      "final_pnl": 9379.5,
+      "sharpe": 1.568302431345054
+    },
+    "best_sharpe_plateau": {
+      "k_entry": 0.75,
+      "k_active": 3.0,
+      "plateau_sharpe": 1.568302431345054,
+      "raw_sharpe": 1.568302431345054,
+      "final_pnl": 9379.5
+    },
+    "artifacts": {
+      "grid_csv": "/Users/leoliu/imc/prosperity/analysis_outputs/ou_ksearch/VEV_4500/grid.csv",
+      "heatmap_pnl": "/Users/leoliu/imc/prosperity/analysis_outputs/ou_ksearch/VEV_4500/heatmap_pnl.png",
+      "heatmap_sharpe": "/Users/leoliu/imc/prosperity/analysis_outputs/ou_ksearch/VEV_4500/heatmap_sharpe.png"
+    }
+  },
+  {
+    "product": "VEV_5000",
+    "mode": "taker_only_1d",
+    "default": {
+      "k_taker_only": 1.5
+    },
+    "grid": {
+      "scales": [
+        0.7,
+        0.85,
+        1.0,
+        1.15,
+        1.3,
+        1.5
+      ]
+    },
+    "best_pnl_peak": {
+      "k_taker_only": 1.5,
+      "final_pnl": 97197.0,
+      "sharpe": 2.6307411604272373
+    },
+    "best_pnl_plateau": {
+      "k_taker_only": 1.5,
+      "plateau_pnl": 80985.0,
+      "raw_pnl": 97197.0,
+      "sharpe": 2.6307411604272373
+    },
+    "best_sharpe_peak": {
+      "k_taker_only": 1.5,
+      "final_pnl": 97197.0,
+      "sharpe": 2.6307411604272373
+    },
+    "best_sharpe_plateau": {
+      "k_taker_only": 1.7249999999999999,
+      "plateau_sharpe": 2.295546521310596,
+      "raw_sharpe": 2.5122853131757448,
+      "final_pnl": 80985.0
+    },
+    "artifacts": {
+      "grid_csv": "/Users/leoliu/imc/prosperity/analysis_outputs/ou_ksearch/VEV_5000/grid.csv",
+      "heatmap_pnl": "/Users/leoliu/imc/prosperity/analysis_outputs/ou_ksearch/VEV_5000/heatmap_pnl.png",
+      "heatmap_sharpe": "/Users/leoliu/imc/prosperity/analysis_outputs/ou_ksearch/VEV_5000/heatmap_sharpe.png"
+    }
+  },
+  {
+    "product": "VEV_5100",
+    "mode": "taker_only_1d",
+    "default": {
+      "k_taker_only": 1.5
+    },
+    "grid": {
+      "scales": [
+        0.7,
+        0.85,
+        1.0,
+        1.15,
+        1.3,
+        1.5
+      ]
+    },
+    "best_pnl_peak": {
+      "k_taker_only": 1.0499999999999998,
+      "final_pnl": 101443.0,
+      "sharpe": 2.8652550673031376
+    },
+    "best_pnl_plateau": {
+      "k_taker_only": 1.0499999999999998,
+      "plateau_pnl": 95011.0,
+      "raw_pnl": 101443.0,
+      "sharpe": 2.8652550673031376
+    },
+    "best_sharpe_peak": {
+      "k_taker_only": 1.0499999999999998,
+      "final_pnl": 101443.0,
+      "sharpe": 2.8652550673031376
+    },
+    "best_sharpe_plateau": {
+      "k_taker_only": 1.0499999999999998,
+      "plateau_sharpe": 2.855107603179189,
+      "raw_sharpe": 2.8652550673031376,
+      "final_pnl": 101443.0
+    },
+    "artifacts": {
+      "grid_csv": "/Users/leoliu/imc/prosperity/analysis_outputs/ou_ksearch/VEV_5100/grid.csv",
+      "heatmap_pnl": "/Users/leoliu/imc/prosperity/analysis_outputs/ou_ksearch/VEV_5100/heatmap_pnl.png",
+      "heatmap_sharpe": "/Users/leoliu/imc/prosperity/analysis_outputs/ou_ksearch/VEV_5100/heatmap_sharpe.png"
+    }
+  },
+  {
+    "product": "VEV_5200",
+    "mode": "taker_only_1d",
+    "default": {
+      "k_taker_only": 1.5
+    },
+    "grid": {
+      "scales": [
+        0.7,
+        0.85,
+        1.0,
+        1.15,
+        1.3,
+        1.5
+      ]
+    },
+    "best_pnl_peak": {
+      "k_taker_only": 1.0499999999999998,
+      "final_pnl": 74533.0,
+      "sharpe": 2.852812836118816
+    },
+    "best_pnl_plateau": {
+      "k_taker_only": 1.0499999999999998,
+      "plateau_pnl": 60329.0,
+      "raw_pnl": 74533.0,
+      "sharpe": 2.852812836118816
+    },
+    "best_sharpe_peak": {
+      "k_taker_only": 1.0499999999999998,
+      "final_pnl": 74533.0,
+      "sharpe": 2.852812836118816
+    },
+    "best_sharpe_plateau": {
+      "k_taker_only": 1.0499999999999998,
+      "plateau_sharpe": 2.5064599586994,
+      "raw_sharpe": 2.852812836118816,
+      "final_pnl": 74533.0
+    },
+    "artifacts": {
+      "grid_csv": "/Users/leoliu/imc/prosperity/analysis_outputs/ou_ksearch/VEV_5200/grid.csv",
+      "heatmap_pnl": "/Users/leoliu/imc/prosperity/analysis_outputs/ou_ksearch/VEV_5200/heatmap_pnl.png",
+      "heatmap_sharpe": "/Users/leoliu/imc/prosperity/analysis_outputs/ou_ksearch/VEV_5200/heatmap_sharpe.png"
+    }
+  },
+  {
+    "product": "VEV_5300",
+    "mode": "taker_only_1d",
+    "default": {
+      "k_taker_only": 1.4
+    },
+    "grid": {
+      "scales": [
+        0.7,
+        0.85,
+        1.0,
+        1.15,
+        1.3,
+        1.5
+      ]
+    },
+    "best_pnl_peak": {
+      "k_taker_only": 0.9799999999999999,
+      "final_pnl": 50729.0,
+      "sharpe": 2.53311643380848
+    },
+    "best_pnl_plateau": {
+      "k_taker_only": 0.9799999999999999,
+      "plateau_pnl": 48624.0,
+      "raw_pnl": 50729.0,
+      "sharpe": 2.53311643380848
+    },
+    "best_sharpe_peak": {
+      "k_taker_only": 1.4,
+      "final_pnl": 49684.0,
+      "sharpe": 2.8310977740964565
+    },
+    "best_sharpe_plateau": {
+      "k_taker_only": 1.4,
+      "plateau_sharpe": 2.5718208932731295,
+      "raw_sharpe": 2.8310977740964565,
+      "final_pnl": 49684.0
+    },
+    "artifacts": {
+      "grid_csv": "/Users/leoliu/imc/prosperity/analysis_outputs/ou_ksearch/VEV_5300/grid.csv",
+      "heatmap_pnl": "/Users/leoliu/imc/prosperity/analysis_outputs/ou_ksearch/VEV_5300/heatmap_pnl.png",
+      "heatmap_sharpe": "/Users/leoliu/imc/prosperity/analysis_outputs/ou_ksearch/VEV_5300/heatmap_sharpe.png"
+    }
+  },
+  {
+    "product": "VEV_5400",
+    "mode": "taker_only_1d",
+    "default": {
+      "k_taker_only": 1.3
+    },
+    "grid": {
+      "scales": [
+        0.7,
+        0.85,
+        1.0,
+        1.15,
+        1.3,
+        1.5
+      ]
+    },
+    "best_pnl_peak": {
+      "k_taker_only": 0.9099999999999999,
+      "final_pnl": 24891.0,
+      "sharpe": 2.207583941851248
+    },
+    "best_pnl_plateau": {
+      "k_taker_only": 0.9099999999999999,
+      "plateau_pnl": 23513.0,
+      "raw_pnl": 24891.0,
+      "sharpe": 2.207583941851248
+    },
+    "best_sharpe_peak": {
+      "k_taker_only": 1.105,
+      "final_pnl": 23513.0,
+      "sharpe": 2.252986905659447
+    },
+    "best_sharpe_plateau": {
+      "k_taker_only": 0.9099999999999999,
+      "plateau_sharpe": 2.207583941851248,
+      "raw_sharpe": 2.207583941851248,
+      "final_pnl": 24891.0
+    },
+    "artifacts": {
+      "grid_csv": "/Users/leoliu/imc/prosperity/analysis_outputs/ou_ksearch/VEV_5400/grid.csv",
+      "heatmap_pnl": "/Users/leoliu/imc/prosperity/analysis_outputs/ou_ksearch/VEV_5400/heatmap_pnl.png",
+      "heatmap_sharpe": "/Users/leoliu/imc/prosperity/analysis_outputs/ou_ksearch/VEV_5400/heatmap_sharpe.png"
+    }
+  },
+  {
+    "product": "VEV_5500",
+    "mode": "taker_only_1d",
+    "default": {
+      "k_taker_only": 1.3
+    },
+    "grid": {
+      "scales": [
+        0.7,
+        0.85,
+        1.0,
+        1.15,
+        1.3,
+        1.5
+      ]
+    },
+    "best_pnl_peak": {
+      "k_taker_only": 1.3,
+      "final_pnl": 8067.0,
+      "sharpe": 1.3986513434346026
+    },
+    "best_pnl_plateau": {
+      "k_taker_only": 0.9099999999999999,
+      "plateau_pnl": 7608.0,
+      "raw_pnl": 7610.0,
+      "sharpe": 1.1277776225981966
+    },
+    "best_sharpe_peak": {
+      "k_taker_only": 1.3,
+      "final_pnl": 8067.0,
+      "sharpe": 1.3986513434346026
+    },
+    "best_sharpe_plateau": {
+      "k_taker_only": 1.3,
+      "plateau_sharpe": 1.2568655647367541,
+      "raw_sharpe": 1.3986513434346026,
+      "final_pnl": 8067.0
+    },
+    "artifacts": {
+      "grid_csv": "/Users/leoliu/imc/prosperity/analysis_outputs/ou_ksearch/VEV_5500/grid.csv",
+      "heatmap_pnl": "/Users/leoliu/imc/prosperity/analysis_outputs/ou_ksearch/VEV_5500/heatmap_pnl.png",
+      "heatmap_sharpe": "/Users/leoliu/imc/prosperity/analysis_outputs/ou_ksearch/VEV_5500/heatmap_sharpe.png"
+    }
+  }
+]

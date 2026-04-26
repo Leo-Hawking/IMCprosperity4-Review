@@ -4,7 +4,7 @@ import polars as pl
 from pathlib import Path
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
-RAW_DIR = DATA_DIR / "raw"
+RAW_DIR = DATA_DIR / "bt"
 PROCESSED_DIR = DATA_DIR / "processed"
 
 

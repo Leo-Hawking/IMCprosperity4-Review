@@ -16,7 +16,7 @@ Examples:
   ./backtest/run_bt.sh round1trade/final_ash.py 2 --out backtest/runs/mytest.log
   ./backtest/run_bt.sh round1trade/new_ash_strategy.py 2 --out backtest/runs/mytest.log
   ./backtest/run_bt.sh final.py 1-0 1-1 --out backtest/runs/mytest.log
-  ./backtest/run_bt.sh round1trade/final.py 1--1 1-0 --merge-pnl --out backtest/runs/round1_day-1_0.log
+  ./backtest/run_bt.sh round1trade/final.py 1--2 2--1 2-0 2-1 --merge-pnl --out backtest/runs/mytest.log
 
 
     ./backtest/run_bt.sh round1trade/final_root.py 2--1 2-0 --merge-pnl --out backtest/runs/pepper_root.log

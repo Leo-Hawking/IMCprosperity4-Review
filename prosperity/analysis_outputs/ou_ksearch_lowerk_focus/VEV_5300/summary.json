@@ -1,0 +1,45 @@
+{
+  "product": "VEV_5300",
+  "mode": "taker_only_1d",
+  "default": {
+    "k_taker_only": 1.4
+  },
+  "grid": {
+    "scales": [
+      0.35,
+      0.45,
+      0.55,
+      0.7,
+      0.85,
+      1.0,
+      1.15
+    ]
+  },
+  "best_pnl_peak": {
+    "k_taker_only": 0.9799999999999999,
+    "final_pnl": 50729.0,
+    "sharpe": 2.53311643380848
+  },
+  "best_pnl_plateau": {
+    "k_taker_only": 1.19,
+    "plateau_pnl": 48624.0,
+    "raw_pnl": 48624.0,
+    "sharpe": 2.5718208932731295
+  },
+  "best_sharpe_peak": {
+    "k_taker_only": 1.4,
+    "final_pnl": 49684.0,
+    "sharpe": 2.8310977740964565
+  },
+  "best_sharpe_plateau": {
+    "k_taker_only": 1.6099999999999999,
+    "plateau_sharpe": 2.722773831915762,
+    "raw_sharpe": 2.722773831915762,
+    "final_pnl": 42381.0
+  },
+  "artifacts": {
+    "grid_csv": "/Users/leoliu/imc/prosperity/analysis_outputs/ou_ksearch_lowerk_focus/VEV_5300/grid.csv",
+    "heatmap_pnl": "/Users/leoliu/imc/prosperity/analysis_outputs/ou_ksearch_lowerk_focus/VEV_5300/heatmap_pnl.png",
+    "heatmap_sharpe": "/Users/leoliu/imc/prosperity/analysis_outputs/ou_ksearch_lowerk_focus/VEV_5300/heatmap_sharpe.png"
+  }
+}
