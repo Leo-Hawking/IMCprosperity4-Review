@@ -29,8 +29,9 @@ class Context:
         data_dir: str | Path = "data",
         days: list[int] | None = None,
         fair_overrides: dict[str, Callable] | None = None,
+        round_num: int = 3,
     ) -> "Context":
-        raw = dataio.load_days(data_dir, days=days)
+        raw = dataio.load_days(data_dir, days=days, round_num=round_num)
 
         # 依序附加派生列
         ob_wide = enrich.attach_spread(raw.ob_wide)
@@ -46,7 +47,13 @@ class Context:
         trades = enrich.attach_tte(trades)
 
         products = ob_wide["product"].unique().to_list() if not ob_wide.is_empty() else []
-        fair_df = compute_all_fairs(ob_wide, products, overrides=fair_overrides)
+        overrides = dict(fair_overrides or {})
+        if round_num == 5:
+            from .fair import base as fair_base
+
+            for p in products:
+                overrides.setdefault(p, lambda ob, p=p: fair_base.round5_fair(ob, p))
+        fair_df = compute_all_fairs(ob_wide, products, overrides=overrides)
 
         return cls(
             days=raw.days,

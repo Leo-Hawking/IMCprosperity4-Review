@@ -1,0 +1,34 @@
+{
+  "product": "VELVETFRUIT_EXTRACT",
+  "default_threshold": 7.0,
+  "best_pnl_peak": {
+    "halflife": 25000,
+    "threshold_scale": 1.0,
+    "threshold_value": 7.0,
+    "final_pnl": 87180.0,
+    "sharpe": 2.660004259971702
+  },
+  "best_pnl_plateau": {
+    "halflife": 25000,
+    "threshold_scale": 1.5,
+    "threshold_value": 10.5,
+    "plateau_pnl": 79040.0,
+    "raw_pnl": 86046.0,
+    "sharpe": 2.794086356236236
+  },
+  "best_sharpe_peak": {
+    "halflife": 25000,
+    "threshold_scale": 2.0,
+    "threshold_value": 14.0,
+    "final_pnl": 81928.0,
+    "sharpe": 2.8084938856837436
+  },
+  "best_sharpe_plateau": {
+    "halflife": 25000,
+    "threshold_scale": 2.0,
+    "threshold_value": 14.0,
+    "plateau_sharpe": 2.6471590923516155,
+    "raw_sharpe": 2.8084938856837436,
+    "final_pnl": 81928.0
+  }
+}

@@ -1,0 +1,342 @@
+{
+  "HYDROGEL_PACK": {
+    "product": "HYDROGEL_PACK",
+    "default_threshold": 20.0,
+    "best_pnl_peak": {
+      "halflife": 25000,
+      "threshold_scale": 1.0,
+      "threshold_value": 20.0,
+      "final_pnl": 127001.0,
+      "sharpe": 2.014027331502349
+    },
+    "best_pnl_plateau": {
+      "halflife": 25000,
+      "threshold_scale": 1.5,
+      "threshold_value": 30.0,
+      "plateau_pnl": 107282.0,
+      "raw_pnl": 107502.0,
+      "sharpe": 1.941299972332487
+    },
+    "best_sharpe_peak": {
+      "halflife": 25000,
+      "threshold_scale": 2.0,
+      "threshold_value": 40.0,
+      "final_pnl": 113286.0,
+      "sharpe": 2.3708071981955636
+    },
+    "best_sharpe_plateau": {
+      "halflife": 25000,
+      "threshold_scale": 2.0,
+      "threshold_value": 40.0,
+      "plateau_sharpe": 1.941299972332487,
+      "raw_sharpe": 2.3708071981955636,
+      "final_pnl": 113286.0
+    }
+  },
+  "VEV_4000": {
+    "product": "VEV_4000",
+    "default_threshold": 18.0,
+    "best_pnl_peak": {
+      "halflife": 10000,
+      "threshold_scale": 1.0,
+      "threshold_value": 18.0,
+      "final_pnl": 36668.0,
+      "sharpe": 1.3465184389464082
+    },
+    "best_pnl_plateau": {
+      "halflife": 25000,
+      "threshold_scale": 0.5,
+      "threshold_value": 9.0,
+      "plateau_pnl": 20706.0,
+      "raw_pnl": 21429.0,
+      "sharpe": 0.3885525288005378
+    },
+    "best_sharpe_peak": {
+      "halflife": 1500,
+      "threshold_scale": 2.0,
+      "threshold_value": 36.0,
+      "final_pnl": 5473.0,
+      "sharpe": 4.647258263380093
+    },
+    "best_sharpe_plateau": {
+      "halflife": 500,
+      "threshold_scale": 2.0,
+      "threshold_value": 36.0,
+      "plateau_sharpe": 3.7106442941874525,
+      "raw_sharpe": 4.439813404247335,
+      "final_pnl": 4039.0
+    }
+  },
+  "VELVETFRUIT_EXTRACT": {
+    "product": "VELVETFRUIT_EXTRACT",
+    "default_threshold": 7.0,
+    "best_pnl_peak": {
+      "halflife": 25000,
+      "threshold_scale": 1.0,
+      "threshold_value": 7.0,
+      "final_pnl": 87180.0,
+      "sharpe": 2.660004259971702
+    },
+    "best_pnl_plateau": {
+      "halflife": 25000,
+      "threshold_scale": 1.5,
+      "threshold_value": 10.5,
+      "plateau_pnl": 79040.0,
+      "raw_pnl": 86046.0,
+      "sharpe": 2.794086356236236
+    },
+    "best_sharpe_peak": {
+      "halflife": 25000,
+      "threshold_scale": 2.0,
+      "threshold_value": 14.0,
+      "final_pnl": 81928.0,
+      "sharpe": 2.8084938856837436
+    },
+    "best_sharpe_plateau": {
+      "halflife": 25000,
+      "threshold_scale": 2.0,
+      "threshold_value": 14.0,
+      "plateau_sharpe": 2.6471590923516155,
+      "raw_sharpe": 2.8084938856837436,
+      "final_pnl": 81928.0
+    }
+  },
+  "VEV_4500": {
+    "product": "VEV_4500",
+    "default_threshold": 1.0,
+    "best_pnl_peak": {
+      "halflife": 10000,
+      "threshold_scale": 0.5,
+      "threshold_value": 0.5,
+      "final_pnl": 14606.0,
+      "sharpe": 0.8480910746414866
+    },
+    "best_pnl_plateau": {
+      "halflife": 25000,
+      "threshold_scale": 2.0,
+      "threshold_value": 2.0,
+      "plateau_pnl": 14412.0,
+      "raw_pnl": 14520.0,
+      "sharpe": 0.8464613775907832
+    },
+    "best_sharpe_peak": {
+      "halflife": 4000,
+      "threshold_scale": 1.0,
+      "threshold_value": 1.0,
+      "final_pnl": 14518.0,
+      "sharpe": 0.852777823743195
+    },
+    "best_sharpe_plateau": {
+      "halflife": 4000,
+      "threshold_scale": 2.0,
+      "threshold_value": 2.0,
+      "plateau_sharpe": 0.8109783858658145,
+      "raw_sharpe": 0.8401522744748459,
+      "final_pnl": 14317.0
+    }
+  },
+  "VEV_5000": {
+    "product": "VEV_5000",
+    "default_threshold": 18.0,
+    "best_pnl_peak": {
+      "halflife": 10000,
+      "threshold_scale": 1.0,
+      "threshold_value": 18.0,
+      "final_pnl": 89708.0,
+      "sharpe": 2.2209413563849183
+    },
+    "best_pnl_plateau": {
+      "halflife": 25000,
+      "threshold_scale": 0.5,
+      "threshold_value": 9.0,
+      "plateau_pnl": 61926.0,
+      "raw_pnl": 61926.0,
+      "sharpe": 1.3347019005041216
+    },
+    "best_sharpe_peak": {
+      "halflife": 1500,
+      "threshold_scale": 2.0,
+      "threshold_value": 36.0,
+      "final_pnl": 37604.0,
+      "sharpe": 3.074413788735676
+    },
+    "best_sharpe_plateau": {
+      "halflife": 4000,
+      "threshold_scale": 2.0,
+      "threshold_value": 36.0,
+      "plateau_sharpe": 1.90647143256192,
+      "raw_sharpe": 3.0276748822158708,
+      "final_pnl": 54456.0
+    }
+  },
+  "VEV_5100": {
+    "product": "VEV_5100",
+    "default_threshold": 12.0,
+    "best_pnl_peak": {
+      "halflife": 25000,
+      "threshold_scale": 1.5,
+      "threshold_value": 18.0,
+      "final_pnl": 95070.5,
+      "sharpe": 2.7067343997329893
+    },
+    "best_pnl_plateau": {
+      "halflife": 10000,
+      "threshold_scale": 0.5,
+      "threshold_value": 6.0,
+      "plateau_pnl": 76828.0,
+      "raw_pnl": 78492.0,
+      "sharpe": 1.9109550484474422
+    },
+    "best_sharpe_peak": {
+      "halflife": 25000,
+      "threshold_scale": 2.0,
+      "threshold_value": 24.0,
+      "final_pnl": 91903.0,
+      "sharpe": 3.2757522994567685
+    },
+    "best_sharpe_plateau": {
+      "halflife": 25000,
+      "threshold_scale": 2.0,
+      "threshold_value": 24.0,
+      "plateau_sharpe": 2.498407430100484,
+      "raw_sharpe": 3.2757522994567685,
+      "final_pnl": 91903.0
+    }
+  },
+  "VEV_5200": {
+    "product": "VEV_5200",
+    "default_threshold": 6.0,
+    "best_pnl_peak": {
+      "halflife": 4000,
+      "threshold_scale": 1.5,
+      "threshold_value": 9.0,
+      "final_pnl": 69076.0,
+      "sharpe": 2.4401072588374966
+    },
+    "best_pnl_plateau": {
+      "halflife": 10000,
+      "threshold_scale": 1.5,
+      "threshold_value": 9.0,
+      "plateau_pnl": 63333.0,
+      "raw_pnl": 68639.0,
+      "sharpe": 2.31911622911768
+    },
+    "best_sharpe_peak": {
+      "halflife": 4000,
+      "threshold_scale": 2.0,
+      "threshold_value": 12.0,
+      "final_pnl": 68871.0,
+      "sharpe": 2.599086920073574
+    },
+    "best_sharpe_plateau": {
+      "halflife": 4000,
+      "threshold_scale": 2.0,
+      "threshold_value": 12.0,
+      "plateau_sharpe": 2.280850321602043,
+      "raw_sharpe": 2.599086920073574,
+      "final_pnl": 68871.0
+    }
+  },
+  "VEV_5300": {
+    "product": "VEV_5300",
+    "default_threshold": 5.5,
+    "best_pnl_peak": {
+      "halflife": 4000,
+      "threshold_scale": 1.5,
+      "threshold_value": 8.25,
+      "final_pnl": 39213.0,
+      "sharpe": 2.277320014627836
+    },
+    "best_pnl_plateau": {
+      "halflife": 10000,
+      "threshold_scale": 1.0,
+      "threshold_value": 5.5,
+      "plateau_pnl": 30006.0,
+      "raw_pnl": 34278.0,
+      "sharpe": 1.6391245293072005
+    },
+    "best_sharpe_peak": {
+      "halflife": 4000,
+      "threshold_scale": 1.5,
+      "threshold_value": 8.25,
+      "final_pnl": 39213.0,
+      "sharpe": 2.277320014627836
+    },
+    "best_sharpe_plateau": {
+      "halflife": 4000,
+      "threshold_scale": 2.0,
+      "threshold_value": 11.0,
+      "plateau_sharpe": 1.7303338612423083,
+      "raw_sharpe": 1.7303338612423083,
+      "final_pnl": 24878.0
+    }
+  },
+  "VEV_5400": {
+    "product": "VEV_5400",
+    "default_threshold": 4.0,
+    "best_pnl_peak": {
+      "halflife": 4000,
+      "threshold_scale": 0.75,
+      "threshold_value": 3.0,
+      "final_pnl": 17388.0,
+      "sharpe": 1.715540034623581
+    },
+    "best_pnl_plateau": {
+      "halflife": 4000,
+      "threshold_scale": 0.5,
+      "threshold_value": 2.0,
+      "plateau_pnl": 13574.0,
+      "raw_pnl": 15316.0,
+      "sharpe": 1.3536765770989916
+    },
+    "best_sharpe_peak": {
+      "halflife": 4000,
+      "threshold_scale": 1.5,
+      "threshold_value": 6.0,
+      "final_pnl": 12158.0,
+      "sharpe": 2.168979538453959
+    },
+    "best_sharpe_plateau": {
+      "halflife": 4000,
+      "threshold_scale": 1.0,
+      "threshold_value": 4.0,
+      "plateau_sharpe": 1.3692902788547914,
+      "raw_sharpe": 1.7035307496930332,
+      "final_pnl": 14998.0
+    }
+  },
+  "VEV_5500": {
+    "product": "VEV_5500",
+    "default_threshold": 4.0,
+    "best_pnl_peak": {
+      "halflife": 4000,
+      "threshold_scale": 0.5,
+      "threshold_value": 2.0,
+      "final_pnl": 4478.0,
+      "sharpe": 0.7954129492031375
+    },
+    "best_pnl_plateau": {
+      "halflife": 25000,
+      "threshold_scale": 0.5,
+      "threshold_value": 2.0,
+      "plateau_pnl": 3798.0,
+      "raw_pnl": 3936.0,
+      "sharpe": 0.6280963981284223
+    },
+    "best_sharpe_peak": {
+      "halflife": 4000,
+      "threshold_scale": 0.75,
+      "threshold_value": 3.0,
+      "final_pnl": 3538.0,
+      "sharpe": 1.0267537571116419
+    },
+    "best_sharpe_plateau": {
+      "halflife": 4000,
+      "threshold_scale": 0.5,
+      "threshold_value": 2.0,
+      "plateau_sharpe": 0.6280963981284223,
+      "raw_sharpe": 0.7954129492031375,
+      "final_pnl": 4478.0
+    }
+  }
+}

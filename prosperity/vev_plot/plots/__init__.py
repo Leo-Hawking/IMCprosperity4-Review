@@ -4,6 +4,7 @@ from .day_overlay import plot_day_overlay
 from .depth import plot_depth_grid, plot_product_detail, plot_underlying_detail
 from .iv_diagnostics import (
     plot_iv_smile,
+    plot_iv_smile_3d,
     plot_iv_residual,
     plot_price_residual,
     plot_underlying_autocorr,
@@ -22,6 +23,7 @@ __all__ = [
     "plot_spread",
     "plot_moneyness",
     "plot_iv_smile",
+    "plot_iv_smile_3d",
     "plot_iv_residual",
     "plot_price_residual",
     "plot_underlying_autocorr",
