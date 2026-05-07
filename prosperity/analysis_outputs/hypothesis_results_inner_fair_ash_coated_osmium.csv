@@ -1,8 +1,0 @@
-hypothesis,method,statistic,p_value,p_bonferroni,p_fdr_bh,effect_size,effect_label,reject_h0@0.05,reject_bonf@0.05,reject_fdr@0.05
-H1 mean reversion b<0,Regression slope one-sided,-171.95281267829833,0.0,0.0,0.0,-0.9933786793318656,slope b,True,True,True
-H2 E[x]=0,One-sample t-test,32.208006730569046,9.021561111868197e-224,6.315092778307738e-223,2.1050309261025795e-223,0.18610506147135802,Cohen's d (1-sample),True,True,True
-H3 day means equal,ANOVA,1.0748397008292836,0.34136563713472157,1.0,0.47791189198861017,0.0005044770721107097,Var(day means),False,False,False
-H4 residual normality,Jarque-Bera,39063.51192918254,0.0,0.0,0.0,5.59488870890825,Excess kurtosis,True,True,True
-H5 no ARCH effect,"Ljung-Box(residual^2, lag=20)",17.050530487961563,0.6496900999092869,1.0,0.7337323901806638,0.8525265243980782,lb_stat/lag,False,False,False
-H6 jump counts uniform across days,Chi-square goodness-of-fit,0.6192218157632191,0.7337323901806638,1.0,0.7337323901806638,14.38363267359428,Std(jump counts),False,False,False
-H7 day -2 vs day 0 same distribution,Mann-Whitney U,50991426.5,0.003938089117525238,0.02756662382267667,0.006891655955669167,-0.02309987137672964,Rank-biserial r,True,True,True
