@@ -13,6 +13,7 @@ from .edge_scatter import plot_edge_scatter
 from .fill_histogram import plot_fill_histogram
 from .trade_interval import plot_trade_interval
 from .pnl_attribution import plot_pnl_attribution
+from .pnl_decomp import plot_pnl_decomp, plot_groups_decomp
 from .summary_table import build_summary
 
 __all__ = [
@@ -26,5 +27,7 @@ __all__ = [
     "plot_fill_histogram",
     "plot_trade_interval",
     "plot_pnl_attribution",
+    "plot_pnl_decomp",
+    "plot_groups_decomp",
     "build_summary",
 ]

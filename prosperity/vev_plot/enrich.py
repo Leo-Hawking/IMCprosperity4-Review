@@ -40,9 +40,35 @@ def attach_spread(ob_wide: pl.DataFrame) -> pl.DataFrame:
     """ob_wide 附加 `spread_1 = ask1 - bid1` 和 wall_mid。"""
     if ob_wide.is_empty():
         return ob_wide
+    bid_wall = pl.coalesce([
+        pl.when(
+            (pl.col("bid_volume_1").fill_null(-1) >= pl.col("bid_volume_2").fill_null(-1))
+            & (pl.col("bid_volume_1").fill_null(-1) >= pl.col("bid_volume_3").fill_null(-1))
+        )
+        .then(pl.col("bid_price_1"))
+        .when(pl.col("bid_volume_2").fill_null(-1) >= pl.col("bid_volume_3").fill_null(-1))
+        .then(pl.col("bid_price_2"))
+        .otherwise(pl.col("bid_price_3")),
+        pl.col("bid_price_1"),
+        pl.col("bid_price_2"),
+        pl.col("bid_price_3"),
+    ])
+    ask_wall = pl.coalesce([
+        pl.when(
+            (pl.col("ask_volume_1").fill_null(-1) >= pl.col("ask_volume_2").fill_null(-1))
+            & (pl.col("ask_volume_1").fill_null(-1) >= pl.col("ask_volume_3").fill_null(-1))
+        )
+        .then(pl.col("ask_price_1"))
+        .when(pl.col("ask_volume_2").fill_null(-1) >= pl.col("ask_volume_3").fill_null(-1))
+        .then(pl.col("ask_price_2"))
+        .otherwise(pl.col("ask_price_3")),
+        pl.col("ask_price_1"),
+        pl.col("ask_price_2"),
+        pl.col("ask_price_3"),
+    ])
     return ob_wide.with_columns(
         (pl.col("ask_price_1") - pl.col("bid_price_1")).alias("spread_1"),
-        ((pl.col("ask_price_1") + pl.col("bid_price_1")) / 2).alias("wall_mid"),
+        ((ask_wall + bid_wall) / 2).alias("wall_mid"),
     )
 
 

@@ -23,7 +23,13 @@ UNDERLYING = "VELVETFRUIT_EXTRACT"
 DELTA1_EXTRA = "HYDROGEL_PACK"
 ALL_PRODUCTS = VOUCHER_SYMBOLS + [UNDERLYING, DELTA1_EXTRA]
 
-DAY_START_TTE = {0: 8, 1: 7, 2: 6}   # days to expiry at the start of each historical day
+DAY_START_TTE_BY_ROUND = {
+    3: {0: 8.0, 1: 7.0, 2: 6.0},   # round 3 history days
+    4: {1: 7.0, 2: 6.0, 3: 5.0},   # round 4 history days
+    # round 5 has no options — values are placeholders to keep schema float-typed
+    5: {2: 3.0, 3: 2.0, 4: 1.0},
+}
+DAY_START_TTE = {0: 8, 1: 7, 2: 6}   # legacy default; updated by load_days()
 SUBMISSION_START_TTE = 5              # round 3 live submission
 TICKS_PER_DAY = 1_000_000             # timestamp ranges 0..1_000_000 per day
 
@@ -43,19 +49,26 @@ def _coalesce_int(col: str) -> pl.Expr:
 def load_days(
     data_dir: str | Path = "data",
     days: list[int] | None = None,
+    round_num: int = 3,
 ) -> RawData:
     data_dir = Path(data_dir)
     if days is None:
         days = sorted(
             int(p.stem.split("_")[-1])
-            for p in data_dir.glob("prices_round_3_day_*.csv")
+            for p in data_dir.glob(f"prices_round_{round_num}_day_*.csv")
         )
+
+    # Mutate module-level DAY_START_TTE in place so already-imported references
+    # (e.g. enrich.attach_tte) pick up this round's schedule.
+    if round_num in DAY_START_TTE_BY_ROUND:
+        DAY_START_TTE.clear()
+        DAY_START_TTE.update(DAY_START_TTE_BY_ROUND[round_num])
 
     price_frames: list[pl.DataFrame] = []
     trade_frames: list[pl.DataFrame] = []
     for d in days:
-        price_frames.append(_read_prices(data_dir / f"prices_round_3_day_{d}.csv"))
-        tp = data_dir / f"trades_round_3_day_{d}.csv"
+        price_frames.append(_read_prices(data_dir / f"prices_round_{round_num}_day_{d}.csv"))
+        tp = data_dir / f"trades_round_{round_num}_day_{d}.csv"
         if tp.exists():
             trade_frames.append(_read_trades(tp, d))
 

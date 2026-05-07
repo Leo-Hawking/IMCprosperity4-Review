@@ -1,0 +1,21 @@
+{
+  "peak": {
+    "weak_frac": 0.8,
+    "strong_mult_near": 0.9,
+    "strong_mult_taker": 1.3,
+    "entry_scale": 1.0,
+    "follow_max_frac": 0.3,
+    "pnl": 324983.0
+  },
+  "plateau": {
+    "weak_frac": 0.8,
+    "strong_mult_near": 0.9,
+    "strong_mult_taker": 1.3,
+    "entry_scale": 1.0,
+    "follow_max_frac": 0.3,
+    "pnl": 324983.0,
+    "plateau_score": 321699.0
+  },
+  "count": 48,
+  "outdir": "/Users/leoliu/imc/prosperity/analysis_outputs/round4_follow2state_psearch"
+}
