@@ -14,10 +14,7 @@
 
 ## 🌌 队伍
 
-<div align="center">
-  <img src="https://img.shields.io/badge/TEAM-DARK_FOREST_HUNTER-1A1B27?style=for-the-badge&logo=target&logoColor=red" />
-  <p><i>"The universe is a dark forest. Every civilization is an armed hunter..."</i></p>
-</div>
+[![Dark Forest Hunter Team Banner](prosperity/assets/images/DarkForestHunter_Banner.png)](prosperity/assets/images/DarkForestHunter_Poster.png)
 
 <table>
 <tr>
