@@ -15,8 +15,8 @@
 ## 🌌 队伍
 
 <div align="center">
-  <a href="prosperity/assets/images/DarkForestHunter_Poster.png">
-    <img src="prosperity/assets/images/DarkForestHunter_Poster.png" alt="Dark Forest Hunter 队徽" width="100%">
+  <a href="prosperity/assets/images/DarkForestHunter_TeamName.png">
+    <img src="prosperity/assets/images/DarkForestHunter_TeamName.png" alt="Dark Forest Hunter 队徽" width="100%">
   </a>
 </div>
 
