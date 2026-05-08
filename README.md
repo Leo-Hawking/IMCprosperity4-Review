@@ -1,9 +1,18 @@
 # IMC Prosperity 4 — 算法交易参赛复盘
 
->
-[![Official Leaderboard](https://img.shields.io/badge/Official-Leaderboard-1A1B27?style=for-the-badge&logo=google-analytics&logoColor=white)](https://prosperity.imc.com/leaderboard)
-[![Algo Rank](https://img.shields.io/badge/Algo_Rank-96th-FFD700?style=for-the-badge)](https://prosperity.imc.com/leaderboard)
-[![Overall Rank](https://img.shields.io/badge/Overall_Rank-93rd-blue?style=for-the-badge)](https://prosperity.imc.com/leaderboard)
+<div align="center">
+
+  <a href="https://prosperity.imc.com/leaderboard">
+    <img src="https://img.shields.io/badge/Official-Leaderboard-1A1B27?style=for-the-badge&logo=google-analytics&logoColor=white" height="45">
+  </a>
+  <a href="https://prosperity.imc.com/leaderboard">
+    <img src="https://img.shields.io/badge/Algo_Rank-96th-FFD700?style=for-the-badge" height="45">
+  </a>
+  <a href="https://prosperity.imc.com/leaderboard">
+    <img src="https://img.shields.io/badge/Overall_Rank-93rd-blue?style=for-the-badge" height="45">
+  </a>
+
+</div>
 
 > 这是一个 **方法论展示型** 仓库,不是冠军 highlight reel。我们**最终总排名93名，算法交易排名96名，Top 0.5%** (详见下方排名总览)。开源的目的不是炫耀名次,而是完整记录我们**面对一个陌生市场如何从零开始观察、提假设、建模、回测、复盘**——包括哪些环节做对了、哪些环节因为先入为主而错失 alpha。
 >
