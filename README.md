@@ -1,13 +1,13 @@
 # IMC Prosperity 4 — 算法交易参赛复盘
 
-> 这是一个 **方法论展示型** 仓库,不是冠军 highlight reel。我们最终在算法交易上的成绩是次顶级水平，最终总排名93名，算法交易排名96名 (详见下方排名总览)。开源的目的不是炫耀名次,而是完整记录我们**面对一个陌生市场如何从零开始观察、提假设、建模、回测、复盘**——包括哪些环节做对了、哪些环节因为先入为主而错失 alpha。
 >
 [![Official Leaderboard](https://img.shields.io/badge/Official-Leaderboard-1A1B27?style=for-the-badge&logo=google-analytics&logoColor=white)](https://prosperity.imc.com/leaderboard)
 [![Algo Rank](https://img.shields.io/badge/Algo_Rank-96th-FFD700?style=for-the-badge)](https://prosperity.imc.com/leaderboard)
 [![Overall Rank](https://img.shields.io/badge/Overall_Rank-93rd-blue?style=for-the-badge)](https://prosperity.imc.com/leaderboard)
 
-> 这是一个 **方法论展示型** 仓库，不是冠军 highlight reel...
+> 这是一个 **方法论展示型** 仓库,不是冠军 highlight reel。我们最终在算法交易上的成绩是次顶级水平，最终总排名93名，算法交易排名96名 (详见下方排名总览)。开源的目的不是炫耀名次,而是完整记录我们**面对一个陌生市场如何从零开始观察、提假设、建模、回测、复盘**——包括哪些环节做对了、哪些环节因为先入为主而错失 alpha。
 >
+> 
 > **如果时间有限,建议直接读 [Round 1](#round-1--单资产趋势--单资产均值回归) 与 [Round 5](#round-5--50-资产复杂跨资产结构) 的复盘**。Round 5 尤其值得读:我们已经通过三种方法独立验证了一个微观结构的数学原理,却因两条惯性观念判断"此处无 alpha",事后才意识到这是这一轮最大的可交易 edge。
 
 ---
