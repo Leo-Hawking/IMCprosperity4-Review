@@ -52,7 +52,7 @@
 IMC Prosperity 4 由 IMC Trading 主办，分为算法交易与手动交易两部分，本仓库专注算法交易。
 
 <div align="center">
-  <img src="prosperity/assets/images/competition_scale.jpeg" alt="Competition Scale and Overview" width="100%">
+  <img src="prosperity/assets/images/competition_scale.jpeg" alt="Competition Scale and Overview" width="70%">
 </div>
 
 规则是基于主办方提供的三天微观行情（订单簿快照 + 成交记录），编写 Python 策略文件并提交至官方撮合系统在线运行，目标为最大化 PnL。
