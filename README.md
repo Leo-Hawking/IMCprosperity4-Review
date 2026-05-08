@@ -29,6 +29,20 @@
   </a>
 </div>
 
+<details>
+  <summary align="center">
+    <b>🏹 [点击查看团队海报 / CLICK TO VIEW MISSION POSTER]</b>
+  </summary>
+  <p align="center">
+    <br>
+    <img src="prosperity/assets/images/DarkForestHunter_Poster.png" width="85%" alt="Dark Forest Hunter Poster">
+    <br>
+    <i>"The universe is a dark forest. Every civilization is an armed hunter..."</i>
+  </p>
+</details>
+
+<br>
+
 <table>
 <tr>
 <td width="180" align="center">
