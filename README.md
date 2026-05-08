@@ -51,15 +51,15 @@
 
 IMC Prosperity 4 由 IMC Trading 主办，分为算法交易与手动交易两部分，本仓库专注算法交易。
 
-<div align="center">
-  <img src="prosperity/assets/images/competition_scale.jpeg" alt="Competition Scale and Overview" width="70%">
-</div>
-
 规则是基于主办方提供的三天微观行情（订单簿快照 + 成交记录），编写 Python 策略文件并提交至官方撮合系统在线运行，目标为最大化 PnL。
 
 赛制为 1 个 Tutorial 预备轮 + 5 个正式轮：Phase 1（Round 1–2，每轮 72h）与 Phase 2（Round 3–5，每轮 48h），两个 Phase 之间排名重置。
 
 本次比赛总参赛队伍 **18,803** 个。
+
+<div align="center">
+  <img src="prosperity/assets/images/competition_scale.jpeg" alt="Competition Scale and Overview" width="100%">
+</div>
 
 官方资料：<https://imc-prosperity.notion.site/prosperity-4-wiki>
 
