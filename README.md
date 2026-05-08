@@ -16,7 +16,7 @@
 </td>
 <td>
 <b>策略设计 · 回测框架 · 复盘可视化</b><br/><br/>
-负责整体策略设计、微观结构分析、自建回测框架与超参数搜索、复盘可视化模块的搭建,以及主要的统计建模工作(OU 验证、Bot 分桶分析、Round 5 内层订单结构发现等)。<br/><br/>
+负责整体策略设计、微观结构分析、自建回测框架与超参数搜索、复盘可视化模块的搭建,以及主要的统计建模工作。<br/><br/>
 🔗 <a href="https://www.linkedin.com/in/haoqing-liu-2232b2293/">LinkedIn</a> · 📧 liuhaoqing.leo@gmail.com · 💻 <a href="https://github.com/Leo-Hawking">GitHub</a>
 </td>
 </tr>
