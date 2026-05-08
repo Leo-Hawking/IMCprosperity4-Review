@@ -31,7 +31,7 @@
 
 <details>
   <summary align="center">
-    <b>🏹 [点击查看团队海报 / CLICK TO VIEW MISSION POSTER]</b>
+    <b>🏹 [点击查看团队海报 / CLICK TO VIEW TEAM POSTER]</b>
   </summary>
   <p align="center">
     <br>
