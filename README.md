@@ -37,19 +37,6 @@ A total of **18,803** teams participated.
 
 Official materials: <https://imc-prosperity.notion.site/prosperity-4-wiki>
 
----
-
-## Rank Summary
-
-| Round | Market Theme | Algo Rank | Key Takeaway |
-|---|---|---|---|
-| Round 0 | Tutorial (matching-engine probing) | — | Confirmed via probe orders that "no queue, bots only hit best, taker can cross" — the foundational mechanics |
-| Round 1 | Single-asset trend + single-asset mean reversion | **170** | Two-layer fair-price correction took shape; we didn't load up on ASH's extreme-deviation regions, where top teams' hard-coded logic widened the gap |
-| Round 2 | Same as Round 1 + sealed-bid auction game | **77** | Bidding hedged uncertainty; ASH's mean drifted, and our conservative position management turned out to be advantageous |
-| Round 3 | Options (10 strikes) + spot | **95** | Abandoned vol/pairs approaches in favor of unified mean reversion across all assets — interpretability over precision |
-| Round 4 | Same market as Round 3 + bot names disclosed | **132** | Bucketing analysis identified Mark 14 / Mark 55 as informed bots; strategy-migration inertia caused a slip |
-| Round 5 | 50 assets, complex cross-asset structure | **96** | Confirmed the "inner/outer orders are generated separately" hypothesis; missed the high-frequency mean-reversion alpha in round-100 jump regions |
-
 
 ---
 
@@ -99,6 +86,21 @@ Responsible for the statistical exploration and validation of cross-asset relati
 </td>
 </tr>
 </table>
+
+---
+
+## Rank Summary
+
+| Round | Market Theme | Algo Rank | Key Takeaway |
+|---|---|---|---|
+| Round 0 | Tutorial (matching-engine probing) | — | Confirmed via probe orders that "no queue, bots only hit best, taker can cross" — the foundational mechanics |
+| Round 1 | Single-asset trend + single-asset mean reversion | **170** | Two-layer fair-price correction took shape; we didn't load up on ASH's extreme-deviation regions, where top teams' hard-coded logic widened the gap |
+| Round 2 | Same as Round 1 + sealed-bid auction game | **77** | Bidding hedged uncertainty; ASH's mean drifted, and our conservative position management turned out to be advantageous |
+| Round 3 | Options (10 strikes) + spot | **95** | Abandoned vol/pairs approaches in favor of unified mean reversion across all assets — interpretability over precision |
+| Round 4 | Same market as Round 3 + bot names disclosed | **132** | Bucketing analysis identified Mark 14 / Mark 55 as informed bots; strategy-migration inertia caused a slip |
+| Round 5 | 50 assets, complex cross-asset structure | **96** | Confirmed the "inner/outer orders are generated separately" hypothesis; missed the high-frequency mean-reversion alpha in round-100 jump regions |
+
+
 
 ---
 
