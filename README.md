@@ -31,12 +31,11 @@ The format: 1 Tutorial round + 5 official rounds. Phase 1 (Rounds 1–2, 72 hour
 
 A total of **18,803** teams participated.
 
+Official materials: <https://imc-prosperity.notion.site/prosperity-4-wiki>
+
 <div align="center">
   <img src="prosperity/assets/images/competition_scale.jpeg" alt="Competition Scale and Overview" width="100%">
 </div>
-
-Official materials: <https://imc-prosperity.notion.site/prosperity-4-wiki>
-
 
 ---
 
