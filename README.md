@@ -21,6 +21,38 @@
 
 ---
 
+## About the Competition
+
+IMC Prosperity 4, hosted by IMC Trading, is divided into algorithmic and manual trading. This repository focuses on the algorithmic trading portion.
+
+The rules: based on three days of microstructure data (order book snapshots and trade records) provided by the organizers, write a Python strategy file and submit it to the official matching engine to run online, with the goal of maximizing PnL.
+
+The format: 1 Tutorial round + 5 official rounds. Phase 1 (Rounds 1–2, 72 hours each) and Phase 2 (Rounds 3–5, 48 hours each), with rankings reset between phases.
+
+A total of **18,803** teams participated.
+
+<div align="center">
+  <img src="prosperity/assets/images/competition_scale.jpeg" alt="Competition Scale and Overview" width="100%">
+</div>
+
+Official materials: <https://imc-prosperity.notion.site/prosperity-4-wiki>
+
+---
+
+## Rank Summary
+
+| Round | Market Theme | Algo Rank | Key Takeaway |
+|---|---|---|---|
+| Round 0 | Tutorial (matching-engine probing) | — | Confirmed via probe orders that "no queue, bots only hit best, taker can cross" — the foundational mechanics |
+| Round 1 | Single-asset trend + single-asset mean reversion | **170** | Two-layer fair-price correction took shape; we didn't load up on ASH's extreme-deviation regions, where top teams' hard-coded logic widened the gap |
+| Round 2 | Same as Round 1 + sealed-bid auction game | **77** | Bidding hedged uncertainty; ASH's mean drifted, and our conservative position management turned out to be advantageous |
+| Round 3 | Options (10 strikes) + spot | **95** | Abandoned vol/pairs approaches in favor of unified mean reversion across all assets — interpretability over precision |
+| Round 4 | Same market as Round 3 + bot names disclosed | **132** | Bucketing analysis identified Mark 14 / Mark 55 as informed bots; strategy-migration inertia caused a slip |
+| Round 5 | 50 assets, complex cross-asset structure | **96** | Confirmed the "inner/outer orders are generated separately" hypothesis; missed the high-frequency mean-reversion alpha in round-100 jump regions |
+
+
+---
+
 ## 🌌 Team
 
 <div align="center">
@@ -70,42 +102,12 @@ Responsible for the statistical exploration and validation of cross-asset relati
 
 ---
 
-## About the Competition
 
-IMC Prosperity 4, hosted by IMC Trading, is divided into algorithmic and manual trading. This repository focuses on the algorithmic trading portion.
+## ⚠️ Artifact Status
 
-The rules: based on three days of microstructure data (order book snapshots and trade records) provided by the organizers, write a Python strategy file and submit it to the official matching engine to run online, with the goal of maximizing PnL.
+This repository preserves the competition-time research and implementation artifacts as closely as possible. Some scripts may require path or dependency adjustments before running out of the box.
 
-The format: 1 Tutorial round + 5 official rounds. Phase 1 (Rounds 1–2, 72 hours each) and Phase 2 (Rounds 3–5, 48 hours each), with rankings reset between phases.
-
-A total of **18,803** teams participated.
-
-<div align="center">
-  <img src="prosperity/assets/images/competition_scale.jpeg" alt="Competition Scale and Overview" width="100%">
-</div>
-
-Official materials: <https://imc-prosperity.notion.site/prosperity-4-wiki>
-
----
-
-## Rank Summary
-
-| Round | Market Theme | Algo Rank | Key Takeaway |
-|---|---|---|---|
-| Round 0 | Tutorial (matching-engine probing) | — | Confirmed via probe orders that "no queue, bots only hit best, taker can cross" — the foundational mechanics |
-| Round 1 | Single-asset trend + single-asset mean reversion | **170** | Two-layer fair-price correction took shape; we didn't load up on ASH's extreme-deviation regions, where top teams' hard-coded logic widened the gap |
-| Round 2 | Same as Round 1 + sealed-bid auction game | **77** | Bidding hedged uncertainty; ASH's mean drifted, and our conservative position management turned out to be advantageous |
-| Round 3 | Options (10 strikes) + spot | **95** | Abandoned vol/pairs approaches in favor of unified mean reversion across all assets — interpretability over precision |
-| Round 4 | Same market as Round 3 + bot names disclosed | **132** | Bucketing analysis identified Mark 14 / Mark 55 as informed bots; strategy-migration inertia caused a slip |
-| Round 5 | 50 assets, complex cross-asset structure | **96** | Confirmed the "inner/outer orders are generated separately" hypothesis; missed the high-frequency mean-reversion alpha in round-100 jump regions |
-
----
-
-## ⚠️ A Note on Code Runnability
-
-Most of the code in this repo is **the version we actually used during the competition**. Because of time pressure, we did not refactor for open-source presentation — **running it directly may require fixing paths and dependencies** (hard-coded paths, missing dependencies, leftover debug code, etc.).
-
-If you are a potential employer or collaborator, **the core value of this repository lies in the strategy reasoning, the research documents (`*.md`), the retrospective visualization framework, and the per-round methodological narrative** — not in being a plug-and-play codebase. I'm happy to walk through specific implementation details in interviews.
+For employers or collaborators, the main value of this repository is the strategy reasoning, research notes, backtesting framework, retrospective visualization tools, and round-by-round methodological narrative. I am happy to walk through implementation details, design trade-offs, and reproducibility issues in interviews.
 
 ---
 
