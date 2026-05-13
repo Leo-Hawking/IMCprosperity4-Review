@@ -545,12 +545,12 @@ I believe the rebound was driven by three factors:
 
 But the reason we couldn't rebound faster is that we **missed an important alpha**:
 
-#### Post-result counterfactual
-
+> #### Post-result counterfactual
+> 
 > At the time of writing the first version of this retrospective, I knew this was a missed alpha, but I did not yet know its realized economic magnitude. After reconstructing the strategy and replaying it under the final-round setting, the conclusion became much harsher: adding this single lattice-reversal layer would likely have moved us from 96th algo rank into the Top-15 range.
-
+> 
 > This changed my interpretation of the mistake. It was not a minor unused observation. It was the dominant opportunity-cost item of our Round 5 submission.
-
+> 
 > The important nuance is that the alpha's realized value depended heavily on how much edge the official evaluation environment allocated to this microstructure effect. In-sample, I understood the structure; ex post, the official distribution revealed that this structure was far more rewarded than I had assumed.
 
 Before the results came out, Discord discussions made me immediately realize I had **missed an alpha I could have monopolized**: **high-frequency mean reversion in round-100 jump regions**.
