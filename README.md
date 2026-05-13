@@ -17,7 +17,7 @@
 > This is a **methodology-showcase repository**, not a champion's highlight reel. Our **final overall rank was 93rd, algorithmic-trading rank 96th — Top 0.5%** (see the rank summary below). The purpose of open-sourcing this is not to flaunt rankings but to fully document **how we approached an unfamiliar market from scratch — observing, hypothesizing, modeling, backtesting, and reviewing** — including which steps we got right and which alphas we missed because of preconceived assumptions.
 >
 >
-> **If you're short on time, jump directly to the [Round 1](#round-1--single-asset-trend--single-asset-mean-reversion) and [Round 5](#round-5--50-assets-complex-cross-asset-structure) retrospectives.** Round 5 is especially worth reading: we independently verified the mathematical structure of a microstructure phenomenon through three different methods, yet judged it "no alpha here" because of two ingrained assumptions. We only realized in hindsight that this was the largest tradable edge of the round.
+> **If you're short on time, jump directly to the [Round 1](#round-1--single-asset-trend--single-asset-mean-reversion) and [Round 5](#round-5--50-assets-complex-cross-asset-structure) retrospectives.** Round 5 is especially worth reading: we independently verified the mathematical structure of a microstructure phenomenon through three different methods, yet judged it "no alpha here" because of two ingrained assumptions. Post-result reconstruction suggests that deploying this single lattice-reversal signal would likely have moved our algorithmic rank from 96th into the Top-15 range.
 
 ---
 
@@ -533,7 +533,7 @@ The PEBBLE pair strategy delivered **essentially zero holding PnL with linearly-
 
 > **This is the section of the README I most want readers to read.**
 
-The final result was **96**.
+The final result was ranked **96**.
 
 I believe the rebound was driven by three factors:
 
@@ -544,6 +544,14 @@ I believe the rebound was driven by three factors:
 **3.** Some teams may not have utilized all 50 assets, possibly abandoning some. They overlooked that even though single-asset volatility is much larger than the spread, dozens of Brownian motions produce variance cancellation: in trading these assets, PnL accumulates linearly while independent random risk grows with the square root.
 
 But the reason we couldn't rebound faster is that we **missed an important alpha**:
+
+#### Post-result counterfactual
+
+> At the time of writing the first version of this retrospective, I knew this was a missed alpha, but I did not yet know its realized economic magnitude. After reconstructing the strategy and replaying it under the final-round setting, the conclusion became much harsher: adding this single lattice-reversal layer would likely have moved us from 96th algo rank into the Top-15 range.
+
+> This changed my interpretation of the mistake. It was not a minor unused observation. It was the dominant opportunity-cost item of our Round 5 submission.
+
+> The important nuance is that the alpha's realized value depended heavily on how much edge the official evaluation environment allocated to this microstructure effect. In-sample, I understood the structure; ex post, the official distribution revealed that this structure was far more rewarded than I had assumed.
 
 Before the results came out, Discord discussions made me immediately realize I had **missed an alpha I could have monopolized**: **high-frequency mean reversion in round-100 jump regions**.
 
