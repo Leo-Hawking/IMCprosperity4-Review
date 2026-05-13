@@ -8,6 +8,3 @@ __pycache__/
 prosperity/analysis_outputs/
 prosperity/data/round*log/
 prosperity/old_verison_backtest/
-prosperity/3_review.ipynb
-prosperity/explore_wall_mid.ipynb
-prosperity/backtest/review.ipynb
